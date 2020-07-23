@@ -1,0 +1,13 @@
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\bin\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.exe
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\bin\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.deps.json
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\bin\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.runtimeconfig.json
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\bin\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.runtimeconfig.dev.json
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\bin\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.dll
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\bin\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.pdb
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\obj\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.csprojAssemblyReference.cache
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\obj\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.AssemblyInfoInputs.cache
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\obj\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.AssemblyInfo.cs
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\obj\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.csproj.CoreCompileInputs.cache
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\obj\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.dll
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\obj\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.pdb
+C:\Users\Justin\source\repos\GC_Capstone1_PigLatinTranslator\GC_Capstone1_PigLatinTranslator\obj\Debug\netcoreapp3.1\GC_Capstone1_PigLatinTranslator.genruntimeconfig.cache
