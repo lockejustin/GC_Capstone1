@@ -59,8 +59,7 @@ namespace GC_Capstone1_PigLatinTranslator
                 string letterCheck = "";
                 string lastChar = "";
 
-
-
+                
 
                 for (int i = 0; i <= wordLength; i++)
                 {
