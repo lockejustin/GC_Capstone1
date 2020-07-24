@@ -23,16 +23,16 @@ namespace GC_Capstone1_PigLatinTranslator
         public static string[] PromptForString(string message)
         {
             Console.Write($"{message} : ");
-            string word = Console.ReadLine().ToLower();
+            string word = Console.ReadLine();//.ToLower();
 
-            while (word == "")
+            while (word.Trim() == "")
             {
                 Console.Write("Nothing entered.  Please try again. ");
-                word = Console.ReadLine().ToLower();
+                word = Console.ReadLine();//.ToLower();
             }
 
             string[] separator = { " " };
-            string[] words = word.Split(" ");
+            string[] words = word.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
             return words;
         }
@@ -59,7 +59,8 @@ namespace GC_Capstone1_PigLatinTranslator
                 string letterCheck = "";
                 string lastChar = "";
 
-                
+
+
 
                 for (int i = 0; i <= wordLength; i++)
                 {
@@ -71,14 +72,13 @@ namespace GC_Capstone1_PigLatinTranslator
                     }
                 }
 
-                lastChar = word.Substring(wordLength-1);
+                lastChar = word.Substring(wordLength - 1);
 
                 bool endsWithPunc = true;
                 if (lastChar == "." || lastChar == "!" || lastChar == "?" || lastChar == ",")
                     endsWithPunc = true;
                 else
                     endsWithPunc = false;
-
 
                 if (containsSymbol || isNumber)
                     linePigLatin += word + " ";
@@ -90,11 +90,9 @@ namespace GC_Capstone1_PigLatinTranslator
                     linePigLatin += word.Substring(splitPoint, wordLength - splitPoint - 1) + word.Substring(0, splitPoint) + "ay" + lastChar + " ";
                 else
                     linePigLatin += word.Substring(splitPoint, wordLength - splitPoint) + word.Substring(0, splitPoint) + "ay ";
-
             }
 
             Console.WriteLine(linePigLatin.Trim());
-            
 
         }
 
