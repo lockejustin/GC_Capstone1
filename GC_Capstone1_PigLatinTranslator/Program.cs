@@ -18,7 +18,7 @@ namespace GC_Capstone1_PigLatinTranslator
             //    continueProgram = ContinueProgramYesNoPrompt("Would you like to translate another word?");
             //}
 
-            while (continueProgram) //full sentence array loop
+            while (continueProgram) //full string array loop
             {
                 string message = "Please enter a sentence you'd like to translate to Pig Latin";
                 string[] words = PromptForString(message); //prompts user for word using message from line above
@@ -47,26 +47,19 @@ namespace GC_Capstone1_PigLatinTranslator
         {
             Console.Write($"{message} : ");
             string word = Console.ReadLine().ToLower();
-            
-            
-            //creating array to handle multiple words using string split
-            
-            
+
+            while (word == "")
+            {
+                Console.Write("Nothing entered.  Please try again. ");
+                word = Console.ReadLine().ToLower();
+            }
+
             string[] separators = { " " };
             string[] words = word.Split(" ");
-            
-            
-            //foreach (var word2 in words)
-            //{
-            //    Console.WriteLine(word2);
-            //}
 
             return words;
 
         }
-
-
-
 
         public static bool StartsWithVowel(string word)
         {
@@ -85,7 +78,7 @@ namespace GC_Capstone1_PigLatinTranslator
             bool vowelStart = StartsWithVowel(word);
             string wordPigLatin = "";
             int wordLength = word.Length;
-            int cutPoint = 0;
+            int splitPoint = 0;
             string letterCheck = "";
 
             for (int i = 0; i <= wordLength; i++)
@@ -93,7 +86,7 @@ namespace GC_Capstone1_PigLatinTranslator
                 letterCheck = word.Substring(i);
                 if (StartsWithVowel(letterCheck) == true)
                 {
-                    cutPoint = i;
+                    splitPoint = i;
                     break;
                 }
             }
@@ -101,7 +94,7 @@ namespace GC_Capstone1_PigLatinTranslator
             if (vowelStart)
                 wordPigLatin = word + "way";
             else
-                wordPigLatin = word.Substring(cutPoint, wordLength - cutPoint) + word.Substring(0,cutPoint) + "ay";
+                wordPigLatin = word.Substring(splitPoint, wordLength - splitPoint) + word.Substring(0,splitPoint) + "ay";
 
             Console.WriteLine($"Your word translated to Pig Latin is: {wordPigLatin}");
 
@@ -115,50 +108,45 @@ namespace GC_Capstone1_PigLatinTranslator
             {
                 bool vowelStart = StartsWithVowel(word);
                 int wordLength = word.Length;
-                int cutPoint = 0;
+                int splitPoint = 0;
                 string letterCheck = "";
+                string lastChar = "";
+
+                
 
                 for (int i = 0; i <= wordLength; i++)
                 {
                     letterCheck = word.Substring(i);
                     if (StartsWithVowel(letterCheck) == true)
                     {
-                        cutPoint = i;
+                        splitPoint = i;
                         break;
                     }
                 }
 
-                if (vowelStart)
-                    linePigLatin += word + "way ";
-                else
-                    linePigLatin += word.Substring(cutPoint, wordLength - cutPoint) + word.Substring(0, cutPoint) + "ay ";
+                lastChar = word.Substring(wordLength-1);
 
+                bool endsWithPunc = true;
+                if (lastChar == "." || lastChar == "!" || lastChar == "?" || lastChar == ",")
+                    endsWithPunc = true;
+                else
+                    endsWithPunc = false;
+
+                
+
+                if (vowelStart && endsWithPunc)
+                    linePigLatin += word.Substring(0,wordLength-1) + "way" + lastChar + " ";
+                else if (vowelStart)
+                    linePigLatin += word + "way ";
+                else if (endsWithPunc)
+                    linePigLatin += word.Substring(splitPoint, wordLength - splitPoint - 1) + word.Substring(0, splitPoint) + "ay" + lastChar + " ";
+                else
+                    linePigLatin += word.Substring(splitPoint, wordLength - splitPoint) + word.Substring(0, splitPoint) + "ay ";
+                
+                
             }
 
             Console.WriteLine(linePigLatin.Trim());
-
-            //bool vowelStart = StartsWithVowel(word);
-            //string wordPigLatin = "";
-            //int wordLength = word.Length;
-            //int cutPoint = 0;
-            //string letterCheck = "";
-
-            //for (int i = 0; i <= wordLength; i++)
-            //{
-            //    letterCheck = word.Substring(i);
-            //    if (StartsWithVowel(letterCheck) == true)
-            //    {
-            //        cutPoint = i;
-            //        break;
-            //    }
-            //}
-
-            //if (vowelStart)
-            //    wordPigLatin = word + "way";
-            //else
-            //    wordPigLatin = word.Substring(cutPoint, wordLength - cutPoint) + word.Substring(0, cutPoint) + "ay";
-
-            //Console.WriteLine($"Your word translated to Pig Latin is: {wordPigLatin}");
 
         }
 
@@ -185,7 +173,10 @@ namespace GC_Capstone1_PigLatinTranslator
             }
         }
 
-
+        //public static bool ContainsSymbol(string word)
+        //{
+        //    return;
+        //}
 
 
 
